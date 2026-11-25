@@ -4,8 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miga Modas</title>
-<meta name="description" content="Miga Modas — moda feminina, masculina e infantil em Araçatuba-SP. Novidades toda semana e envio para todo o Brasil.">
+<meta name="description" content="Miga Modas — moda feminina, masculina e infantil em Araçatuba-SP. Vestidos, moda praia e novidades toda semana. Loja física no Jardim Universo e envio para todo o Brasil.">
+<meta name="theme-color" content="#b3164f">
+<link rel="canonical" href="https://brenotocchio.github.io/miga-modas/">
 <link rel="icon" href="img/miga-logo.jpg">
+<link rel="apple-touch-icon" href="img/miga-logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Miga Modas">
+<meta property="og:title" content="Miga Modas — moda feminina em Araçatuba-SP">
+<meta property="og:description" content="Vestidos, moda praia e novidades toda semana. Loja física no Jardim Universo e envio para todo o Brasil.">
+<meta property="og:url" content="https://brenotocchio.github.io/miga-modas/">
+<meta property="og:image" content="https://brenotocchio.github.io/miga-modas/img/miga-03.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="img/miga-03.jpg" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Miga Modas","url":"https://brenotocchio.github.io/miga-modas/","logo":"https://brenotocchio.github.io/miga-modas/img/miga-logo.jpg","image":"https://brenotocchio.github.io/miga-modas/img/miga-02.jpg","telephone":"+55-18-99753-8460","address":{"@type":"PostalAddress","streetAddress":"R. Sud Menuci, 478 - Jardim Universo","addressLocality":"Araçatuba","addressRegion":"SP","postalCode":"16056-807","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-21.1856586,"longitude":-50.427152},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/migamodasoficial/"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,7 +33,7 @@
 :root{color-scheme:light dark;
  --bg:light-dark(#fffafb,#1a1014);--soft:light-dark(#fbe6ec,#2a1820);--card:light-dark(#fff,#24151b);
  --ink:light-dark(#2a1218,#f8e9ee);--mute:light-dark(#6e5059,#c7a9b3);--line:light-dark(#f0d3dc,#3e2630);
- --brand:light-dark(#b3164f,#ff5c93);--brand-ink:#fff;--deep:light-dark(#2a1218,#0f080b);--gold:#e3a83b;--wa:#1faa59}
+ --brand:light-dark(#b3164f,#ff5c93);--brand-ink:light-dark(#fff,#1a0a10);--danger:light-dark(#c0182f,#ff8a9c);--deep:light-dark(#2a1218,#0f080b);--gold:#e3a83b;--wa:#128045}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:clip}
@@ -49,16 +64,16 @@ nav a{display:block;white-space:nowrap;padding:10px 12px;border-radius:999px;tex
 nav a:hover{background:var(--soft);color:var(--brand)}
 .menu{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .hd .btn{min-height:44px;padding:0 18px;white-space:nowrap}
-@media(max-width:1180px){.menu{display:grid;place-items:center}
+@media(max-width:1180px){nav a{padding:8px 9px;font-size:15px}.hd{gap:14px}.hd .btn span{display:none}.hd .btn{padding:0 13px}}
+@media(max-width:900px){.menu{display:grid;place-items:center}
  nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 18px 30px #2a121826;display:none;padding:8px 16px 18px;max-height:calc(100dvh - 120px);overflow-y:auto}
  nav a{border-radius:12px}
- nav.open{display:block}nav ul{flex-direction:column}nav a{padding:14px 12px;font-size:18px}
- .hd .btn span{display:none}.hd .btn{padding:0 13px}}
+ nav.open{display:block}nav ul{flex-direction:column}nav a{padding:14px 12px;font-size:18px}}
 /* hero */
 .hero{position:relative;background:var(--soft)}
 .slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .slides::-webkit-scrollbar{display:none}
-.slide{--ink:#2a1218;--mute:#6e5059;--card:#fff;--brand:#b3164f;color:var(--ink);flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,56px);padding:clamp(28px,5vw,64px) max(5vw,16px,calc((100% - 1240px)/2)) 84px}
+.slide{--ink:#2a1218;--mute:#6e5059;--card:#fff;--brand:#b3164f;--brand-ink:#fff;color:var(--ink);flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,56px);padding:clamp(28px,5vw,64px) max(5vw,16px,calc((100% - 1240px)/2)) 84px}
 .slide .tag{display:inline-block;background:var(--card);color:var(--brand);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
 .slide h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02}
 .slide h1 em{color:var(--brand)}
@@ -67,13 +82,13 @@ nav a:hover{background:var(--soft);color:var(--brand)}
 .shot{position:relative;width:100%;max-width:430px;margin-inline:auto}
 .shot::before{content:"";position:absolute;inset:6% -7% -4% 7%;border-radius:999px 999px 28px 28px;background:var(--arch,#f4c3d2)}
 .shot img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:0 24px 50px #2a121833;animation:rise .9s ease both}
-.shot figcaption{position:absolute;left:-14px;bottom:30px;background:var(--card);color:var(--brand);font-weight:700;font-size:14px;padding:10px 16px;border-radius:14px;box-shadow:0 10px 24px #2a121826;display:flex;align-items:center;gap:8px}
+.shot figcaption{position:absolute;left:-14px;bottom:-18px;background:var(--card);color:var(--brand);font-weight:700;font-size:14px;padding:10px 16px;border-radius:14px;box-shadow:0 10px 24px #2a121826;display:flex;align-items:center;gap:8px}
 .shot figcaption svg{width:18px;height:18px}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}}
 .logo img{height:60px;width:auto;border-radius:10px;background:#fff}
 .dots{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;gap:10px;align-items:center}
-.dots #dots button{width:12px;height:12px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0}
-.dots #dots button[aria-current=true]{background:var(--brand);width:30px;border-radius:8px}
+.dots #dots button{position:relative;width:20px;height:44px;padding:0;border:0;background:none;cursor:pointer}.dots #dots button::before{content:"";position:absolute;left:4px;right:4px;top:16px;height:12px;border-radius:6px;background:var(--line);transition:background .2s}
+.dots #dots button[aria-current=true]{width:38px}.dots #dots button[aria-current=true]::before{background:var(--brand)}
 .arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:20px}
 @media(max-width:760px){.slide{grid-template-columns:1fr}.shot{max-width:300px;order:-1}.shot figcaption{left:-6px}.slide{text-align:center}.slide p{margin-inline:auto}.slide .acts{justify-content:center}}
 /* vantagens */
@@ -81,7 +96,7 @@ nav a:hover{background:var(--soft);color:var(--brand)}
 .perk{display:flex;gap:14px;align-items:center;padding:22px max(2vw,16px);border-right:1px solid var(--line)}
 .perk:last-child{border:0}.perk svg{flex:none;width:40px;height:40px;color:var(--brand)}
 .perk b{display:block}.perk small{color:var(--mute);font-size:14px}
-@media(max-width:900px){.perks{grid-template-columns:repeat(2,minmax(0,1fr))}.perk:nth-child(2){border-right:0}.perk:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:1100px){.perks{grid-template-columns:repeat(2,minmax(0,1fr))}.perk:nth-child(2){border-right:0}.perk:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media(max-width:480px){.perks{grid-template-columns:1fr}.perk{border-right:0;border-bottom:1px solid var(--line)}}
 /* categorias */
 .cats{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px}
@@ -106,7 +121,7 @@ nav a:hover{background:var(--soft);color:var(--brand)}
 .prod{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
 .prod .ph{position:relative;aspect-ratio:4/5;background:var(--soft)}
 .prod .ph svg{width:100%;height:100%}
-.badge{position:absolute;top:12px;left:12px;background:var(--brand);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px}
+.badge{position:absolute;z-index:1;top:12px;left:12px;background:var(--brand);color:var(--brand-ink);font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px}
 .prod .in{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
 .prod small{color:var(--mute);font-size:13px}.prod h3{font:600 17px/1.3 "DM Sans",sans-serif;margin:0}
 .prod .sz{font-size:13px;color:var(--mute)}
@@ -172,6 +187,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}footer a{text-
 @media(max-width:820px){.ft{grid-template-columns:1fr 1fr}}@media(max-width:480px){.ft{grid-template-columns:1fr}}
 .fab{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px #0004;color:#fff}
 .fab svg{width:32px;height:32px}
+@media(max-width:600px){.fab{width:54px;height:54px;right:14px;bottom:14px}.fab svg{width:28px;height:28px}}
 /* novidades dinâmicas */
 .prod .ph{display:block;width:100%;padding:0;border:0;cursor:pointer;overflow:hidden}
 .prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.prod:hover .ph img{transform:scale(1.04)}
@@ -201,7 +217,7 @@ dialog::backdrop{background:#1a0a10b3}
 .meta{color:var(--mute);font-size:14px}
 .seg{display:flex;flex-wrap:wrap;gap:8px}
 .seg button{min-width:48px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
-.seg button[aria-pressed=true]{background:var(--brand);color:#fff;border-color:var(--brand)}
+.seg button[aria-pressed=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
 .seg button:disabled{opacity:.4;cursor:not-allowed}
 @media(max-width:700px){.pm{grid-template-columns:1fr}}
 .cf{padding:28px;max-width:420px}.cf .acts{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
@@ -220,7 +236,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
 .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
 .photos figure{position:relative;margin:0;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--soft)}
 .photos img{width:100%;height:100%;object-fit:cover}
-.photos .cap{position:absolute;left:6px;bottom:6px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.photos .cap{position:absolute;left:6px;bottom:6px;background:var(--brand);color:var(--brand-ink);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
 .photos .rm,.photos .mv{position:absolute;top:5px;width:34px;height:34px;border-radius:50%;border:0;background:#000b;color:#fff;cursor:pointer;font-size:16px}
 .photos .rm{right:5px}.photos .mv{left:5px}
 .addph{position:relative;display:grid;place-items:center;align-content:center;gap:4px;aspect-ratio:4/5;border:2px dashed var(--brand);border-radius:12px;cursor:pointer;color:var(--brand);font-weight:700;text-align:center;font-size:13px;padding:6px}
@@ -232,10 +248,10 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
 .sw:first-of-type{margin-top:16px}
 .sw input{width:22px;height:22px;accent-color:var(--brand);flex:none}.sw small{display:block;color:var(--mute);font-weight:400}
 .sbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;white-space:nowrap}
-.sbtn:hover{border-color:var(--brand);color:var(--brand)}.sbtn.danger{color:#c0182f;border-color:#f0b3be}
+.sbtn:hover{border-color:var(--brand);color:var(--brand)}.sbtn.danger{color:var(--danger);border-color:color-mix(in srgb,var(--danger) 45%,transparent)}
 .adm-top .sbtn{background:transparent;color:#fff;border-color:#5a3644}
 .formacts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.formacts .btn{flex:1;justify-content:center}
-.err{color:#c0182f;font-weight:500;min-height:1.5em;margin:10px 0 0}
+.err{color:var(--danger);font-weight:500;min-height:1.5em;margin:10px 0 0}
 .demo{background:#fff4d6;color:#5a4200;border-radius:12px;padding:12px 14px;font-size:14px;margin-bottom:6px}
 .lsthd{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
 .lsthd h2{margin:0}
@@ -248,9 +264,9 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
 .pill.d{background:#2a1218;color:#fff}.pill.g{background:#ece7e9;color:#6e5059}
 @media(max-width:900px){.adm-in{grid-template-columns:1fr}}
 @media(max-width:520px){.it{grid-template-columns:56px minmax(0,1fr)}.it .acts{grid-column:1/-1;justify-content:flex-start}.adm-top b small{display:none}}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--deep);color:#fff;padding:12px 22px;border-radius:999px;z-index:70;opacity:0;transition:.3s;pointer-events:none;font-weight:500;max-width:calc(100% - 32px);text-align:center}
+.toast{position:fixed;left:50%;width:max-content;bottom:24px;transform:translate(-50%,20px);background:var(--deep);color:#fff;padding:12px 22px;border-radius:999px;z-index:70;opacity:0;transition:.3s;pointer-events:none;font-weight:500;max-width:calc(100% - 32px);text-align:center}
 .toast.on{opacity:1;transform:translate(-50%,0)}
-.admlink{opacity:.75;font-size:14px}
+.admlink{font-size:14px;text-decoration:underline;text-underline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -273,7 +289,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
  </defs>
 </svg>
 
-<div class="ticker" aria-label="Avisos"><div id="tk"></div></div>
+<aside class="ticker" aria-label="Avisos"><div id="tk"></div></aside>
 
 <header>
  <div class="hd">
@@ -283,7 +299,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
    <li><a href="#novidades" data-nf="masc">Masculino</a></li><li><a href="#novidades" data-nf="inf">Infantil</a></li>
    <li><a href="#quem-somos">Quem somos</a></li><li><a href="#como-comprar">Como comprar</a></li><li><a href="#visite">Contato</a></li>
   </ul></nav>
-  <a class="btn wa js-wa" data-msg="Olá, Miga! Vim pelo site e quero ver as novidades 💖" href="#"><svg><use href="#i-wa"/></svg><span>Comprar no WhatsApp</span></a>
+  <a class="btn wa js-wa" data-msg="Olá, Miga! Vim pelo site e quero ver as novidades 💖" href="#" aria-label="Comprar no WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Comprar no WhatsApp</span></a>
   <button class="menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
  </div>
 </header>
@@ -317,7 +333,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
 </div></section>
 
 <section class="band about" id="quem-somos"><div class="wrap">
- <div class="collage"><img src="img/miga-02.jpg" alt="Interior da loja Miga Modas em Araçatuba" loading="lazy"><img src="img/miga-10.jpg" alt="Vestido listrado no provador da Miga Modas" loading="lazy"><img src="img/miga-07.jpg" alt="Vestido azul frente única no provador da Miga Modas" loading="lazy"></div>
+ <div class="collage"><img src="img/miga-02.jpg" alt="Interior da loja Miga Modas em Araçatuba" width="360" height="640" loading="lazy"><img src="img/miga-10.jpg" alt="Vestido listrado no provador da Miga Modas" width="360" height="640" loading="lazy"><img src="img/miga-07.jpg" alt="Vestido azul frente única no provador da Miga Modas" width="360" height="640" loading="lazy"></div>
  <div>
   <h2>Quem somos: a sua <em>miga</em> da moda</h2>
   <p class="lead">A Miga Modas é uma loja de Araçatuba feita por mulheres empreendedoras, para quem gosta de se vestir bem sem complicação. A gente escolhe cada peça pensando em você: vestidos leves para o calor, saias, chemises e conjuntos para todas as ocasiões, além de moda masculina e infantil para completar o guarda-roupa da família.</p>
@@ -368,7 +384,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
     <g fill="#fbe9ee"><rect x="20" y="20" width="160" height="110" rx="8"/><rect x="220" y="20" width="170" height="110" rx="8"/><rect x="430" y="20" width="160" height="110" rx="8"/><rect x="20" y="170" width="160" height="110" rx="8"/><rect x="430" y="170" width="160" height="110" rx="8"/><rect x="20" y="320" width="160" height="90" rx="8"/><rect x="220" y="320" width="170" height="90" rx="8"/><rect x="430" y="320" width="160" height="90" rx="8"/></g>
     <rect x="220" y="170" width="170" height="110" rx="8" fill="#e8c1cd"/>
     <g fill="#fff"><rect x="0" y="140" width="600" height="22"/><rect x="0" y="290" width="600" height="22"/><rect x="190" y="0" width="22" height="420"/><rect x="400" y="0" width="22" height="420"/></g>
-    <text x="300" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#9a6b79">R. Sud Menuci</text>
+    <text x="105" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#9a6b79">R. Sud Menuci</text>
     <ellipse cx="305" cy="232" rx="20" ry="6" fill="#000" opacity=".18"/>
     <path d="M305 230 c-22-26-32-40-32-56 a32 32 0 0164 0c0 16-10 30-32 56z" fill="#b3164f"/><circle cx="305" cy="174" r="12" fill="#fff"/>
    </svg>
@@ -449,7 +465,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
  </div>
 </section>
 
-<a class="fab js-wa" data-msg="Olá, Miga! Vim pelo site 💖" href="#" aria-label="Conversar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<aside aria-label="Atalho para o WhatsApp"><a class="fab js-wa" data-msg="Olá, Miga! Vim pelo site 💖" href="#" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a></aside>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.4-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 000-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.4-.3z"/></symbol>
@@ -492,11 +508,11 @@ const piece = (g, col, pat, x, y, w) =>
 $("#tk").innerHTML = [...AVISOS, ...AVISOS].map(a => `<span>${esc(a)}</span>`).join("•");
 
 /* banners */
-const shot = b => `<figure class="shot" style="--arch:${b.arch}"><img src="${b.img}" alt="${esc(b.alt)}" style="object-position:${b.pos}"><figcaption><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>${esc(b.cap)}</figcaption></figure>`;
+const shot = (b, i) => `<figure class="shot" style="--arch:${b.arch}"><img src="${b.img}" alt="${esc(b.alt)}" width="360" height="450" style="object-position:${b.pos}"${i ? ` loading="lazy"` : ` fetchpriority="high"`}><figcaption><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>${esc(b.cap)}</figcaption></figure>`;
 $("#slides").innerHTML = BANNERS.map((b, i) => `<div class="slide" style="background:${b.bg}" role="group" aria-roledescription="banner" aria-label="${i+1} de ${BANNERS.length}">
  <div><span class="tag">${esc(b.tag)}</span><h1>${b.title}</h1><p>${esc(b.text)}</p>
  <div class="acts">${i === 2 ? `<a class="btn" href="#visite">${esc(b.cta)}</a><a class="btn wa" href="${wa("Olá, Miga! Quero visitar a loja 💖")}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Falar no WhatsApp</a>` : `<a class="btn" href="#novidades">${esc(b.cta)}</a><a class="btn ghost" href="${wa("Olá, Miga! Vi o banner \"" + b.tag + "\" no site 💖")}" target="_blank" rel="noopener">Pedir no WhatsApp</a>`}</div></div>
- ${shot(b)}</div>`).join("");
+ ${shot(b, i)}</div>`).join("");
 const slides = $("#slides"), dots = $("#dots");
 dots.innerHTML = BANNERS.map((_, i) => `<button aria-label="Ir para o banner ${i+1}"></button>`).join("");
 let cur = 0, timer;
@@ -513,7 +529,7 @@ mark(); restart();
 
 /* categorias */
 $("#cats").innerHTML = CATS.map(c => `<a class="cat" href="#novidades" data-f="${c.name === "Feminino" ? "fem" : c.name === "Masculino" ? "masc" : "inf"}">
- ${c.img ? `<img src="${c.img}" alt="${esc(c.alt)}" loading="lazy"><i></i>` : `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="${c.bg}"/><circle cx="300" cy="120" r="130" fill="${c.ink}" opacity=".55"/>${piece(c.g, "#fff", "", 270, 14, 104)}<rect width="400" height="300" fill="url(#fade${c.name})"/><defs><linearGradient id="fade${c.name}" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></linearGradient></defs></svg>`}
+ ${c.img ? `<img src="${c.img}" alt="${esc(c.alt)}" loading="lazy"><i></i>` : `<svg viewBox="0 0 400 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><rect width="400" height="300" fill="${c.bg}"/><circle cx="300" cy="120" r="130" fill="${c.ink}" opacity=".55"/>${piece(c.g, "#fff", "", 270, 14, 104)}<rect width="400" height="300" fill="url(#fade${c.name})"/><defs><linearGradient id="fade${c.name}" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></linearGradient></defs></svg>`}
  <h3>${esc(c.name)}</h3><span>${esc(c.sub)}</span><b>Ver peças →</b></a>`).join("");
 $("#chips").innerHTML = SUBCATS.map(s => `<a href="${wa("Olá, Miga! Quero ver as opções de " + s.toLowerCase() + " 💖")}" target="_blank" rel="noopener">${esc(s)}</a>`).join("");
 
@@ -528,7 +544,7 @@ const FEED = [
  ["img/miga-11.jpg","https://www.instagram.com/migamodasoficial/reel/Df2ckaoOeY8/","Vestido coral com renda"],
  ["img/miga-08.jpg","https://www.instagram.com/migamodasoficial/reel/DgFJ9j4uMu8/","Vestido de crochê off-white"]
 ];
-$("#feed").innerHTML = FEED.map(f => `<a href="${f[1]}" target="_blank" rel="noopener" aria-label="Ver no Instagram: ${esc(f[2])}"><img src="${f[0]}" alt="${esc(f[2])}" loading="lazy"></a>`).join("");
+$("#feed").innerHTML = FEED.map(f => `<a href="${f[1]}" target="_blank" rel="noopener" aria-label="Ver no Instagram: ${esc(f[2])}"><img src="${f[0]}" alt="${esc(f[2])}" width="360" height="640" loading="lazy"></a>`).join("");
 
 /* horário e "aberto agora" no fuso de Araçatuba */
 const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {timeZone: "America/Sao_Paulo", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23"}).formatToParts(new Date()).map(p => [p.type, p.value]));
@@ -635,7 +651,7 @@ const card = p => {
 };
 const renderTabs = () => {
  const v = visiveis();
- $("#tabs").innerHTML = FILTROS.map(([k, l]) => { const n = k === "all" ? v.length : v.filter(p => p.publico === k).length; return `<button data-k="${k}" aria-pressed="${k === filtro}">${l}${estado === "ok" ? ` (${n})` : ""}</button>`; }).join("");
+ $("#tabs").innerHTML = FILTROS.map(([k, l]) => { const n = k === "all" ? v.length : v.filter(p => p.publico === k).length; return `<button data-k="${k}" aria-pressed="${k === filtro}">${l}${estado === "ok" && v.length ? ` (${n})` : ""}</button>`; }).join("");
 };
 const renderGrid = () => {
  const g = $("#grid"), upd = $("#upd");

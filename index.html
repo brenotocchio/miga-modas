@@ -50,14 +50,15 @@ nav a:hover{background:var(--soft);color:var(--brand)}
 .menu{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .hd .btn{min-height:44px;padding:0 18px;white-space:nowrap}
 @media(max-width:1180px){.menu{display:grid;place-items:center}
- nav{position:fixed;inset:69px 0 auto;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:12px 16px 20px}
+ nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 18px 30px #2a121826;display:none;padding:8px 16px 18px;max-height:calc(100dvh - 120px);overflow-y:auto}
+ nav a{border-radius:12px}
  nav.open{display:block}nav ul{flex-direction:column}nav a{padding:14px 12px;font-size:18px}
  .hd .btn span{display:none}.hd .btn{padding:0 13px}}
 /* hero */
 .hero{position:relative;background:var(--soft)}
 .slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .slides::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,56px);padding:clamp(28px,5vw,64px) max(5vw,16px,calc((100% - 1240px)/2)) 84px}
+.slide{--ink:#2a1218;--mute:#6e5059;--card:#fff;--brand:#b3164f;color:var(--ink);flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,56px);padding:clamp(28px,5vw,64px) max(5vw,16px,calc((100% - 1240px)/2)) 84px}
 .slide .tag{display:inline-block;background:var(--card);color:var(--brand);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
 .slide h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02}
 .slide h1 em{color:var(--brand)}
@@ -144,8 +145,8 @@ nav a:hover{background:var(--soft);color:var(--brand)}
 .info{display:grid;gap:18px}
 .row{display:flex;gap:14px;align-items:flex-start}.row svg{flex:none;width:26px;height:26px;color:var(--brand);margin-top:2px}
 .row b{display:block}.row a{color:var(--brand);font-weight:500}
-.open{display:inline-block;font-size:14px;font-weight:700;padding:4px 12px;border-radius:999px;margin-left:6px}
-.open.y{background:#d9f3e3;color:#11683a}.open.n{background:var(--soft);color:var(--brand)}
+.st{display:inline-block;font-size:14px;font-weight:700;padding:4px 12px;border-radius:999px;margin-left:6px}
+.st.y{background:#d9f3e3;color:#11683a}.st.n{background:var(--soft);color:var(--brand)}
 table{border-collapse:collapse;width:100%;max-width:360px;margin-top:6px}
 td{padding:6px 0;border-bottom:1px dashed var(--line)}td+td{text-align:right;white-space:nowrap}
 tr.today td{font-weight:700;color:var(--brand)}
@@ -358,7 +359,7 @@ body.is-adm .adm{display:block}body.is-adm{overflow:hidden}
    <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Endereço</b>R. Sud Menuci, 478 — Jardim Universo<br>Araçatuba - SP, 16056-807</div></div>
    <div class="row"><svg><use href="#i-wa"/></svg><div><b>WhatsApp (compras)</b><a class="js-wa" data-msg="Olá, Miga! Vim pelo site 💖" href="#">(18) 99790-2816</a></div></div>
    <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2"/></svg><div><b>Telefone</b><a href="tel:+5518997538460">(18) 99753-8460</a></div></div>
-   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div style="flex:1"><b>Horário <span class="open" id="openNow"></span></b>
+   <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div style="flex:1"><b>Horário <span class="st" id="openNow"></span></b>
     <table id="hours"></table></div></div>
   </div>
   <a class="map" href="https://maps.app.goo.gl/iE82xD18MgMJNLEa9" target="_blank" rel="noopener" aria-label="Abrir a loja no Google Maps">
@@ -537,7 +538,7 @@ $("#hours").innerHTML = ordem.map(i => `<tr class="${i === dia ? "today" : ""}">
 const h = HORARIOS[dia] && HORARIOS[dia][1];
 let aberto = false;
 if (h) { const [a, b] = h.split("–").map(t => { const [x, y] = t.split(":"); return +x * 60 + +y; }); aberto = min >= a && min < b; }
-const op = $("#openNow"); op.textContent = aberto ? "Aberto agora" : "Fechado agora"; op.className = "open " + (aberto ? "y" : "n");
+const op = $("#openNow"); op.textContent = aberto ? "Aberto agora" : "Fechado agora"; op.className = "st " + (aberto ? "y" : "n");
 
 /* links de WhatsApp com mensagem pronta */
 document.querySelectorAll(".js-wa").forEach(a => { a.href = wa(a.dataset.msg || "Olá, Miga!"); a.target = "_blank"; a.rel = "noopener"; });
